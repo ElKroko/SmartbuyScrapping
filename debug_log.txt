@@ -1,0 +1,30 @@
+Hora: 13:06
+Cantidad de Matches: 8
+Cantidad de productos: 16
+Miss rate: 50.0%
+
+Matched Products:
+Tottus: Arroz Integral
+Jumbo: Arroz integral multigrano
+
+Tottus: Arroz G1 Grano Largo Ancho
+Jumbo: Arroz grado 1 gran selección grano largo y ancho
+
+Tottus: Arroz Miraflores G1 Grano Largo Ancho
+Jumbo: Arroz grado 1 grano largo y ancho
+
+Tottus: Arroz G1 Integral Largo Ancho
+Jumbo: Arroz grado 1 integral
+
+Tottus: Arroz arborio
+Jumbo: Arroz arborio
+
+Tottus: Arroz G2 Grano Largo Ancho
+Jumbo: Arroz grado 2 gran selección grano largo y ancho
+
+Tottus: Arroz G1 Grano Largo Ancho
+Jumbo: Arroz grado 1 Premium grano largo y ancho
+
+Tottus: Arroz G1 Grano Largo Ancho
+Jumbo: Arroz grado 1 grano largo ancho
+
