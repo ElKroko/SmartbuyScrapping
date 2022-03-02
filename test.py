@@ -2,6 +2,8 @@ import csv
 from difflib import *
 from datetime import datetime
 
+path_lista_productos = "lista_productos.csv"
+
 
 def csv_to_list(filename, list):
     with open(filename, 'r') as file:    
@@ -12,7 +14,7 @@ def csv_to_list(filename, list):
 def csv_tottus(filename, list):
     with open(filename, 'r') as file:
         csvr = csv.reader(file)
-        with open("lista_productos.csv", "w") as file2:
+        with open(path_lista_productos, "w") as file2:
             for producto in csvr:
                 list.append(producto)
                 link = producto[1]
@@ -337,14 +339,14 @@ def ini_producto(ean, title, cant, unit, brand, prod_link, img_link, cmr_price):
     return producto
 
 
-def del_tottus(ean_tottus, tottus):
+def del_tottus(tottus):
     lista_productos = []
 
-    for i in range(len(ean_tottus)):
+    for i in range(len(tottus)):
         if (i == 0): continue   #skip header
-        title = ean_tottus[i][0]
-        html_ean = ean_tottus[i][1]
-        marca_cant_unit = ean_tottus[i][2].split("-")
+        title = tottus[i][0]
+        html_ean = tottus[i][1]
+        marca_cant_unit = tottus[i][2].split("-")
 
         brand = marca_cant_unit[0].strip()
         cant = marca_cant_unit[1].strip().split(" ")[0]
@@ -390,12 +392,17 @@ if __name__ == "__main__":
     tottus = []
     ean_tottus = []
 
-    csv_to_list("Jumbo.csv", jumbo)
-    csv_to_list("Lider.csv", lider)
-    csv_tottus("Tottus.csv", tottus)
-    csv_to_list("EAN_productos.csv", ean_tottus)
+    arroz_csv_jumbo = "To_scrap\Arroz-JumboData-ScrapeStorm.csv"
+    arroz_csv_lider = 'To_scrap\Arroz-LiderData-ScrapeStorm.csv'
+    arroz_csv_tottus = 'To_scrap\Arroz-TottusData-ScrapeStorm.csv'
 
-    lista_productos = del_tottus(ean_tottus, tottus)
+    csv_to_list(arroz_csv_jumbo, jumbo)
+    csv_to_list(arroz_csv_lider, lider)
+    csv_to_list(arroz_csv_tottus, tottus)
+
+    
+
+    lista_productos = del_tottus(tottus)
 
     
     for producto in lista_productos:
